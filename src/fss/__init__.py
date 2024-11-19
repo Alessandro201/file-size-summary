@@ -40,8 +40,9 @@ def main() -> int:
                 except OSError as e:
                     eprint(f"Error in getting size of {file}: {e}")
 
-    print(f"{human_readable(sum(exts.values()))} \tTotal")
-    for ext, size in sorted(exts.items(), key=lambda x: x[1], reverse=True):
+    for ext, size in sorted(exts.items(), key=lambda x: x[1]):
         print(f"{human_readable(size)} \t{ext}")
+
+    print(f"{human_readable(sum(exts.values()))} \tTotal")
 
     return 0
