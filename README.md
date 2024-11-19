@@ -7,7 +7,8 @@ If you have Rye, installing the script and making it available everywhere it's a
 
 ```bash
 git clone https://github.com/Alessandro201/file-size-summary.git
-rye install . -force
+cd file-size-summary
+rye install fss --path .
 ```
 
 ## Usage
