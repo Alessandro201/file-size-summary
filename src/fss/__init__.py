@@ -27,6 +27,9 @@ def main() -> int:
             for file in files:
                 file = os.path.join(root, file)
                 try:
+                    if os.path.islink(file):
+                        continue
+
                     _, ext = os.path.splitext(file)
                     size = os.path.getsize(file)
                     ext = ext or "<NoExtension>"
