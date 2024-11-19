@@ -18,7 +18,8 @@ def human_readable(num: float) -> str:
 def main() -> int:
     paths = sys.argv[1:]
     if not paths:
-        eprint("You need to supply at least a path")
+        print("fss outputs the total file size divided per file extension.")
+        print("USAGE: fss <PATHS..>")
         exit(1)
 
     exts: dict[str, int] = {}
